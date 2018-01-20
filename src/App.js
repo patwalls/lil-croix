@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import YouTube from 'react-youtube';
+
+import LilCroixCan from './lil-croix-can.png';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/91ZFRxGaxYL._SY679_.jpg"/>
-        <h1>Coming Soon</h1>
+        <div style={{display: 'flex', flexWrap: 'wrap'}}>
+          {
+            (Array(400)+'').split(',').map(x=> <img src={LilCroixCan} height="100px"/>)
+          }
+        </div>
       </div>
     );
   }
